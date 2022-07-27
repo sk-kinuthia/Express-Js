@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <html>
+        <script>
+            function verifyAnswer(){
+                var mylist=document.getElementById("myAns");
+                var result=mylist.options[mylist.selectedIndex].text;
+                if(result=="No"){
+                    //disable all the radio button
+                    document.getElementById("csharp").disabled=true;
+                    document.getElementById("js").disabled=true;
+                    document.getElementById("angular").disabled=true;
+
+
+                }else{
+                    //enable all the radio
+                    document.getElementById("csharp").disabled=false;
+                    document.getElementById("js").disabled=false;
+                    document.getElementById("angular").disabled=false;
+                }
+            }
+        </script>
+    </html>
+</head>
+<body>
+ <h2>disable radio Button using dropdown</h2> 
+ <form>
+    <h3>
+        Are you a developer?
+    </h3>
+
+    <select id="myAns" onchange ="VerifyAnswer()">
+        <option value="choose">--choose--</option>
+        <option value="yes">Yes</option>
+        <option value="no">NO</option>
+    </select>
+
+</form> 
+<p><b>if Yes,Choose language your preffered programming</b></p>
+ <label><input type="radio"name="programming "id=csahrp value="csharp">c#</label>
+ <label><input type="radio" name="programming" id="js" value="js">Javascript</label>
+ <label><input type="radio" name="programming" id="angular" value="angular">Angular</label>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <script>
+        //Declaring class
+        class Employee
+        {
+            //initializing object
+            constructor(id,name,school)
+        
+        {
+        this.id=id;
+        this.name=name;
+        this.school=school;
+        }
+        //Declaring method
+
+        detail()
+        {
+            document.write(this.id + ""+ this.name +" "+ this.school + "<br>")
+        }
+    }
+    //passing object to a variable
+    var e1=new Employee(101,"John Kamau","UON");
+    var e2=new Employee(102,"Duke william","tuk");
+
+    e1.detail()
+    e2.detail();
+
+
+    </script>
+</html>
